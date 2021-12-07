@@ -1,5 +1,6 @@
 export default {
   pages: [
+      'pages/guide/index',
     'pages/index/index'
   ],
   window: {
