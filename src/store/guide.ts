@@ -1,13 +1,13 @@
 import {observable} from 'mobx'
+import {queryGuideBanner} from "../services/guide_api";
 
 const guideStore = observable({
     //数据
-    bannerList: ['卧槽','我日'],
+    bannerList: ['卧槽', '我日'],
 
-    incrementAsync() {
-        setTimeout(() => {
-            this.counter++
-        }, 1000)
+    getGuideUrl: async () => {
+        const data = await queryGuideBanner()
+        console.log(data);
     }
 })
 

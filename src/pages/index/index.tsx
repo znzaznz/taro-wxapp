@@ -3,16 +3,10 @@ import { View, Button, Text } from '@tarojs/components'
 import { observer, inject } from 'mobx-react'
 
 import './index.scss'
+import {Store} from "../../common/types";
 
 type PageStateProps = {
-  store: {
-    counterStore: {
-      counter: number,
-      increment: Function,
-      decrement: Function,
-      incrementAsync: Function
-    }
-  }
+  store: Store
 }
 
 interface Index {

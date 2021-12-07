@@ -1,24 +1,22 @@
 import {View, Text} from '@tarojs/components'
 import {observer, inject} from 'mobx-react'
-
+import {useEffect} from "react";
 import './index.scss'
 import {uuid} from "../../utils/utils";
+import {Store} from "../../common/types";
 
 type PageStateProps = {
-    store:{
-        guideStore: {
-            bannerList: Array<string>,
-            incrementAsync: Function
-        }
-    }
+    store:Store
 }
-
-
 
 const Index = (props:PageStateProps) => {
 
     const {guideStore} = props.store
-    const {bannerList} = guideStore
+    const {bannerList,getGuideUrl} = guideStore
+
+    useEffect(()=>{
+        getGuideUrl()
+    },[])
 
     return (
         <View className='index'>
