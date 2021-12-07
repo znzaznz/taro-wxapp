@@ -19,7 +19,7 @@ interface Index {
   props: PageStateProps;
 }
 
-@inject('store')
+@inject('counterStore')
 @observer
 class Index extends Component {
   componentWillMount () { }
