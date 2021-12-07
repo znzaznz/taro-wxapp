@@ -1549,6 +1549,13 @@
   resolved "https://registry.npmmirror.com/@types/ms/download/@types/ms-0.7.31.tgz?cache=0&sync_timestamp=1637271707988&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Fms%2Fdownload%2F%40types%2Fms-0.7.31.tgz#31b7ca6407128a3d2bbc27fe2d21b345397f6197"
   integrity sha1-MbfKZAcSij0rvCf+LSGzRTl/YZc=
 
+"@types/nanoid@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.npmmirror.com/@types/nanoid/download/@types/nanoid-3.0.0.tgz?cache=0&sync_timestamp=1635909635518&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Fnanoid%2Fdownload%2F%40types%2Fnanoid-3.0.0.tgz#c757b20f343f3a1dd76e80a9a431b6290fc20f35"
+  integrity sha1-x1eyDzQ/Oh3XboCppDG2KQ/CDzU=
+  dependencies:
+    nanoid "*"
+
 "@types/node@*":
   version "16.11.11"
   resolved "https://registry.npmmirror.com/@types/node/download/@types/node-16.11.11.tgz#6ea7342dfb379ea1210835bada87b3c512120234"
@@ -7016,7 +7023,7 @@ nan@^2.12.1:
   resolved "https://registry.npmmirror.com/nan/download/nan-2.15.0.tgz#3f34a473ff18e15c1b5626b62903b5ad6e665fee"
   integrity sha1-PzSkc/8Y4VwbVia2KQO1rW5mX+4=
 
-nanoid@^3.1.23:
+nanoid@*, nanoid@^3.1.23, nanoid@^3.1.30:
   version "3.1.30"
   resolved "https://registry.npmmirror.com/nanoid/download/nanoid-3.1.30.tgz#63f93cc548d2a113dc5dfbc63bfa09e2b9b64362"
   integrity sha1-Y/k8xUjSoRPcXfvGO/oJ4rm2Q2I=

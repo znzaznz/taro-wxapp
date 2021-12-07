@@ -1,5 +1,5 @@
 import {Component} from 'react'
-import {Provider} from 'mobx-react'
+import {Provider} from 'mobx-react';
 import {store} from "./store";
 
 import './app.scss'
