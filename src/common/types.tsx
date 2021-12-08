@@ -11,7 +11,7 @@ export interface Store {
     },
     statusStore:{
         message: string | null,
-        type: number | null,
+        type: string | null,
         changeStatus:Function
     }
 }

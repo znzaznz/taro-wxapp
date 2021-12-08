@@ -1,4 +1,5 @@
 import Taro from "@tarojs/taro";
+import {store} from "../store";
 
 const codeMessage = {
     200: "服务器成功返回请求的数据。",
@@ -42,7 +43,18 @@ export const requestApi = (
         data: params,
         ...options
     }).then(res=>{
-        console.log(codeMessage[res.statusCode ?? '404']);
+        if (res.statusCode >= 200 || res.statusCode < 400){
+            store.statusStore.changeStatus({
+                'message': res.errMsg || codeMessage[res.statusCode ?? '200'],
+                'type': 'success',
+            })
+        }else {
+            store.statusStore.changeStatus({
+                'message': res.errMsg || codeMessage[res.statusCode ?? '500'],
+                'type': 'error',
+            })
+        }
+        return res
     }).catch(error=>{
         console.log(error);
     })

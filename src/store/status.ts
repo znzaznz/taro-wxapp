@@ -1,7 +1,7 @@
 import {observable} from 'mobx'
 
 type ChangeStatusProps = {
-    type?: number | null,
+    type?: string | null,
     message?: string | null
 }
 
