@@ -13,6 +13,39 @@ const uuid = () => {
     return s.join("")
 }
 
-export {
-    uuid
+
+// 判断变量的值是否为空
+const isEmpty = (v, shallow = false) => {
+    switch (typeof v) {
+        case 'undefined':
+            return true
+        case 'string':
+            if (v.replace(/(^[ \t\n\r]*)|([ \t\n\r]*$)/g, '').length === 0) return true
+            break
+        case 'boolean':
+            if (!v) return true
+            break
+        case 'number':
+            if (isNaN(v)) return true
+            break
+        case 'object':
+            if (null === v || v.length === 0) return true
+            if (shallow) return false
+            else {
+                const length = Object.keys(v).length
+                let count = 0
+                Object.keys(v).map(item => {
+                    if (!(v[item]) || v[item].length === 0) count++
+                })
+                return length === count
+            }
+        default:
+            return false
+    }
 }
+
+export {
+    uuid,isEmpty
+}
+
+
